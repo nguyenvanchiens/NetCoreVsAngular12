@@ -1,0 +1,22 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <form [formGroup]="form">
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" formControlName="Name" class="form-control" placeholder="Nhập tên loại">
+        </div>
+        <div class="form-group">
+            <label for="Sort">Sort Order</label>
+            <input type="text" formControlName="SortOrder" class="form-control" placeholder="Thứ tự">
+        </div>
+        <div class="form-group">
+            <button *ngIf="id==undefined?'hide':''" type="submit" (click)="addProduct()" class="btn btn-primary">{{SubmitText}}</button>
+            <button *ngIf="id!=undefined?'hide':''" class="btn btn-primary" (click)="Update()">{{SubmitText}}</button>
+          </div>
+    </form>
+    
+</div>
+
+
+<!-- /.container-fluid -->
